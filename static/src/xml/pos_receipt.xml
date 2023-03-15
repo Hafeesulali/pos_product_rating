@@ -1,0 +1,11 @@
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='receipt.orderlines']" position="inside">
+            <t t-if="line.product_rating">
+                <div style="font-weight: bold;">
+                   <t t-esc="line.product_rating"/>
+                </div>
+            </t>
+        </xpath>
+    </t>
+  </templates>
